@@ -34,7 +34,7 @@ Audit an academic paper the way a strict examiner would, then keep auditing it u
 
 - Never pad the list with weak or trivial items to reach the target, and never repeat an issue under a new number.
 
-- Give each issue one of three severity tiers. A blocker stops submission or fails the paper. A major issue affects the grade or the defense. A minor issue affects polish and the reader impression.
+- Give each issue one of three severity tiers. A blocker stops submission or fails the paper. A major issue affects the grade or the defense. A minor issue affects polish and the reader impression. When the tier is unclear, choose the higher tier and say why, so the author sees the risk rather than a softened label.
 
 - Write every issue in the same shape, with its location in the paper, the evidence for it, and a concrete fix the author can apply.
 
@@ -45,6 +45,8 @@ Audit an academic paper the way a strict examiner would, then keep auditing it u
 - Re-verify every first pass item against a primary source, and treat this pass as verification rather than a hunt for new issues.
 
 - Search with `browser.search` and read the source with `browser.open`, and prefer the primary source over a summary or a repost.
+
+- Open every source you cite in a verdict. A search result snippet is not a source, and a summary page is not the primary source.
 
 - Check statutes against the official published text, citations against the publisher or index record, cases against the court or regulator publication, and standards against the standards body record.
 
@@ -126,9 +128,11 @@ Audit an academic paper the way a strict examiner would, then keep auditing it u
 
 - Close the tracked item for the review when the user stops the rounds or the final summary is delivered, and remove the schedule at the same time.
 
+- If the user disputes a finding, re-check it against the primary source and record the outcome in the correction ledger, either retracting the finding or keeping it with the source quoted.
+
 ## Available connectors
 
-- Use `muse.connector_search` to find other connectors and `muse.skill_search` to find related skills.
+- The core method needs only the browser for searching and reading sources. If the paper or its requirements live in Google Docs or Drive, fetch them with those connectors before intake.
 
 - If nothing here fits, look on the web for a maintained API or MCP server and set it up with [Custom Connectors and MCPs](/opt/muse/skills/custom-connector-setup/SKILL.md), or build a custom connector.
 
@@ -178,7 +182,7 @@ Audit an academic paper the way a strict examiner would, then keep auditing it u
 
 - 绝不拿弱问题或琐碎问题凑数，也绝不把同一个问题换个编号再报一遍。
 
-- 每个问题定一个严重级别。定为 blocker 就是交不上去或不及格。定为 major 影响分数或答辩。定为 minor 影响观感和印象。
+- 每个问题定一个严重级别。定为 blocker 就是交不上去或不及格。定为 major 影响分数或答辩。定为 minor 影响观感和印象。级别拿不准就定高一级并写明理由，让作者看到风险而不是被软化过的说法。
 
 - 每个问题写成同一格式，写明在论文里的位置、证据和作者能照着改的具体改法。
 
@@ -189,6 +193,8 @@ Audit an academic paper the way a strict examiner would, then keep auditing it u
 - 逐条回一手来源复核首轮每一条，这一轮是验证，不是再找新问题。
 
 - 用 `browser.search` 搜，用 `browser.open` 读原文，优先一手来源而不是转述或转载。
+
+- 结论里引的每个来源都要亲自打开看过。搜索结果的摘要不是来源，转述页也不是一手来源。
 
 - 法条对官方公布文本，引文对出版方或索引记录，案例对法院或监管机构的发布，标准对标准机构的记录。
 
@@ -270,9 +276,11 @@ Audit an academic paper the way a strict examiner would, then keep auditing it u
 
 - 用户叫停轮查或交付结项总结时关闭这次复查的 tracked item，同时删掉定时任务。
 
+- 用户对某条结论有异议就对着一手来源再核一遍，结果记进修正账，要么撤回这条，要么留下来并把来源引文附上。
+
 ## 可用连接器
 
-- 用 `muse.connector_search` 找其他连接器，用 `muse.skill_search` 找相关 skill。
+- 核心方法只需要浏览器来搜和读来源。如果论文或要求文档在 Google Docs 或 Drive 里，收稿前先用对应的连接器取回来。
 
 - 这里没有合适的，就去网上找有维护的 API 或 MCP 服务，用 [Custom Connectors and MCPs](/opt/muse/skills/custom-connector-setup/SKILL.md) 接进来，或自己搭一个连接器。
 
