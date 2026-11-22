@@ -6,13 +6,15 @@ Audit an academic paper the way a strict examiner would, then keep auditing it u
 
 - Ask the user for the paper file and the requirements or template document that governs it, and read both before judging anything.
 
-- Extract the paper text with `pdftotext` and keep the extracted text as the working copy for searches and counts.
+- Match the intake to the file type. Read a PDF with `pdftotext` and inspect it with `pdfinfo`. Read LaTeX source directly and note that page counts cannot be verified without a local compiler, so audit the source statically instead. Read a Word file with `pandoc` or `python-docx`. Keep the extracted text as the working copy for searches and counts in every case.
 
 - Count words under every plausible rule and record each result, such as body text alone, body plus abstract, and text including punctuation, so a limit dispute can be settled by pointing at one row.
 
 - Record the file hash with `md5sum` and the modification time, and check both again at the start of every later round.
 
-- Inspect the PDF metadata with `pdfinfo` and record the author, creator, and creation time as forensic evidence, not as a verdict on its own.
+- If a new version arrives during a review, record the new hash and time, diff the extracted text against the old copy, and re-check only the changed passages plus anything that depends on them. Note the re-baseline in the round log.
+
+- For a PDF file, inspect the metadata with `pdfinfo` and record the author, creator, and creation time as forensic evidence, not as a verdict on its own.
 
 - Ask the user whether the paper is a draft or a final version, and record the answer, because several judgements change with it, such as unsigned declarations and missing supervision records.
 
@@ -23,6 +25,8 @@ Audit an academic paper the way a strict examiner would, then keep auditing it u
 ## Run the first pass
 
 - Read the whole paper against the requirements document and the template, and number every issue you find in one continuous sequence.
+
+- Match the checks to the discipline. A law paper needs statutes, cases, and standards checked. A computing paper needs repository and publisher records checked, statistics recomputed, and the model, prompts, and data asked for. A science paper needs data, code, and units checked. The two layers stay the same, only the sources change.
 
 - Check the paper against the scoring rubric band by band, since a missing element can cost a whole grade band, such as originality or a literature review.
 
@@ -57,6 +61,8 @@ Audit an academic paper the way a strict examiner would, then keep auditing it u
 - Try to disprove each number before accepting it, and check whether a rounded figure hides a material gap, such as a total rounded down by tens of thousands.
 
 - Recompute every total from its parts and check that a total was not described as if it belonged to one part alone.
+
+- Keep the recomputation script with the round logs in the hidden files folder, so a later round can rerun it instead of redoing the arithmetic by hand.
 
 - Check that no cited source is dated after the paper completion date, and flag any citation that lands within days of completion as rushed rather than wrong.
 
@@ -144,13 +150,15 @@ Audit an academic paper the way a strict examiner would, then keep auditing it u
 
 - 向用户要论文文件和管这篇论文的要求文档或模板，先读完再下判断。
 
-- 用 `pdftotext` 提论文文字，把提好的文字留作搜索和计数的底本。
+- 按文件类型分流收稿。PDF 用 `pdftotext` 提文字，用 `pdfinfo` 看元数据。LaTeX 直接读源码，本地没有编译器就核不了页数，改做静态审计。Word 用 `pandoc` 或 `python-docx` 提文字。每种情况都把提好的文字留作搜索和计数的底本。
 
 - 按每一种可能的口径各算一遍字数并都记下来，比如只算正文，正文加摘要，含标点的字数，这样字数上限有争议时能指着某一行解决。
 
 - 用 `md5sum` 记文件 hash 和修改时间，每一轮开始前再查一遍。
 
-- 用 `pdfinfo` 看 PDF 元数据，把作者、创建工具和创建时间记作取证信号，本身不单独当结论。
+- 复查中收到新版本就重新定基线。记新 hash 和时间，把新提的文字和旧底本 diff，只复核改动过的段落和依赖这些段落的内容，重新定基线这件事写进轮次日志。
+
+- PDF 文件才用 `pdfinfo` 看元数据，把作者、创建工具和创建时间记作取证信号，本身不单独当结论。
 
 - 问用户这是草稿还是终稿并记下来，因为几处判断会跟着变，比如没签名的声明和缺失的指导记录。
 
@@ -161,6 +169,8 @@ Audit an academic paper the way a strict examiner would, then keep auditing it u
 ## 首轮找问题
 
 - 对照要求文档和模板通读全文，找到的问题按一个连续序号编号。
+
+- 检查项跟着学科走。法学论文查法条、案例和标准。计算机论文查代码库和出版方记录，重算统计数，并向作者要模型、提示词和数据。理科论文查数据、代码和单位。两层方法不变，变的是来源。
 
 - 按评分标准逐档对照检查，因为缺一个要素可能丢掉一整档分数，比如原创性或文献综述。
 
@@ -195,6 +205,8 @@ Audit an academic paper the way a strict examiner would, then keep auditing it u
 - 接受每个数字之前先试着证伪它，再看取整是不是藏住了实质差距，比如总数往下取整了几万。
 
 - 每个总数都从组成部分重算一遍，查总数是不是被说成只属于其中一部分。
+
+- 重算用的脚本和轮次日志放在一起，存在 hidden files 文件夹里，后面的轮次直接重跑脚本，不用手算第二遍。
 
 - 查引用的来源没有晚于论文完稿日期的，完稿前几天内引用的标为仓促而不是错误。
 
