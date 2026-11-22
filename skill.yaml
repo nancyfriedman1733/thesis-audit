@@ -1,0 +1,5 @@
+name: "thesis_audit"
+title: "Thesis and Paper Audit"
+description: "Audit an academic paper against its requirements document, find a numbered list of issues, verify every number and claim against primary sources, and challenge its authenticity, with short optional follow-up rounds when the user asks for them."
+category: "Work and knowledge"
+include_in_prompt: false
