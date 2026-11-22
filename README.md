@@ -6,8 +6,6 @@
 ![inputs](https://img.shields.io/badge/inputs-PDF%20%7C%20LaTeX%20%7C%20Word-lightgrey)
 ![license](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-**Language:** [English](README.md) · [中文](README.zh-CN.md) · [日本語](README.ja.md)
-
 Audit an academic paper the way a strict examiner would, then keep auditing it until the findings stop changing.
 
 This skill was distilled from a real audit, not written from theory. It was built while reviewing a law bachelor's thesis, where it found **136 issues** across one first pass, one full second pass, and 25 half-hour follow-up rounds. The same two-layer pattern was later used on a computer-science conference submission (EICA AI-CS 2026, **182 issues**), which is what motivated the format-aware intake: PDF, LaTeX, and Word are all handled, not just PDF.
@@ -62,9 +60,7 @@ Muse will deliver a first-pass report, a second-pass verification report, and �
 thesis-audit/
 ├── SKILL.md          # The skill, bilingual: English first, then 中文
 ├── skill.yaml        # Skill metadata (name, title, description)
-├── README.md         # This file (English)
-├── README.zh-CN.md   # Chinese version of this file
-├── README.ja.md      # Japanese version of this file
+├── README.md         # This file
 └── LICENSE           # MIT License
 ```
 
