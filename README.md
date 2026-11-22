@@ -17,63 +17,6 @@ This skill was distilled from a real audit, not written from theory. It was buil
 | Law bachelor's thesis (Personal Information Protection Law) | 136 | 25 |
 | EICA AI-CS 2026 conference paper (Human-AI resume screening) | 182 | 29 |
 
-### Simulated examples
-
-The 50 entries below are simulated examples, not real audits. They show the range of papers this method handles.
-
-| Paper | Issues found | Follow-up rounds |
-| --- | --- | --- |
-| Master's thesis, contract law | 87 | 12 |
-| Journal submission, machine learning fairness | 124 | 18 |
-| PhD dissertation proposal, piano pedagogy | 42 | 6 |
-| Conference paper, medical imaging | 156 | 21 |
-| Law thesis, data protection | 98 | 14 |
-| Journal submission, behavioral economics | 73 | 9 |
-| Conference paper, NLP | 141 | 17 |
-| Master's thesis, corporate governance | 65 | 8 |
-| Journal submission, environmental law | 112 | 15 |
-| PhD dissertation, robotics | 178 | 26 |
-| Conference paper, computer vision | 133 | 16 |
-| Law thesis, criminal procedure | 91 | 11 |
-| Journal submission, public health | 58 | 7 |
-| Master's thesis, supply chain | 77 | 10 |
-| Conference paper, cybersecurity | 149 | 19 |
-| Journal submission, education policy | 84 | 10 |
-| PhD dissertation, organic chemistry | 167 | 24 |
-| Law thesis, intellectual property | 103 | 13 |
-| Conference paper, recommender systems | 128 | 15 |
-| Journal submission, labor economics | 69 | 8 |
-| Master's thesis, urban planning | 54 | 6 |
-| Conference paper, LLM evaluation | 171 | 23 |
-| Journal submission, clinical trial design | 95 | 12 |
-| Law thesis, constitutional review | 118 | 16 |
-| PhD dissertation, astrophysics | 183 | 28 |
-| Conference paper, IoT security | 137 | 17 |
-| Journal submission, marketing | 61 | 7 |
-| Master's thesis, financial regulation | 88 | 11 |
-| Conference paper, speech recognition | 144 | 18 |
-| Journal submission, sociology of work | 72 | 9 |
-| Law thesis, tort liability | 107 | 14 |
-| PhD dissertation, materials science | 159 | 22 |
-| Conference paper, federated learning | 152 | 20 |
-| Journal submission, development economics | 66 | 8 |
-| Master's thesis, museum studies | 47 | 5 |
-| Conference paper, autonomous driving | 164 | 21 |
-| Journal submission, epidemiology | 99 | 13 |
-| Law thesis, administrative litigation | 121 | 15 |
-| PhD dissertation, quantum computing | 187 | 29 |
-| Conference paper, graph neural networks | 138 | 16 |
-| Journal submission, organizational behavior | 63 | 7 |
-| Master's thesis, translation studies | 52 | 6 |
-| Conference paper, digital twins | 146 | 19 |
-| Journal submission, nutrition science | 81 | 10 |
-| Law thesis, evidence rules | 109 | 13 |
-| PhD dissertation, climate modeling | 174 | 25 |
-| Conference paper, edge computing | 131 | 15 |
-| Journal submission, game theory | 57 | 7 |
-| Master's thesis, art history | 44 | 5 |
-| Conference paper, human-AI collaboration | 158 | 22 |
-
 ## How it works
 
 **Two layers, no more by default.**
